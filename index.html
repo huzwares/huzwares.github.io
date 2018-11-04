@@ -68,7 +68,7 @@
         if (key === 13 && command.value != "") {
             switch (command.value) {
                 case 'links':
-                    terminal('<a href="https://github.com/sinaomrani" target="_blank">github</a><br><a href="https://www.linkedin.com/in/sina-omrani/" target="_blank">linkedIn</a><br><a href="https://twitter.com/sinaomrani" target="_blank">twitter (not updated so long)</a><br><a href="mailto:sina.omrani@hotmail.com">sina [dot] omrani [@] hotmail [dot] com</a>');
+                    terminal('<a href="https://github.com/sinaomrani" target="_blank">github</a><br><a href="https://www.linkedin.com/in/sina-omrani/" target="_blank">linkedIn</a><br><a href="https://twitter.com/sinaomrani" target="_blank">twitter (not updated for a while)</a><br><a href="mailto:sina.omrani@hotmail.com">sina [dot] omrani [@] hotmail [dot] com</a>');
                     break;
                 case 'help':
                     terminal('usage:<br>about&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print my resume and biography<br>links&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print my social profile and contact info<br>projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list of my projects<br>clear&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear the screen<br>help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print this 😒😒😒');
@@ -81,6 +81,9 @@
                     break;
                 case 'about':
                     terminal("I was born in Amol, Iran and I moved to Tehran to study Mathematics and Physics in my high school. I participated in the Kharazmi robotic contest back then and got interested in the field so at 2009 I participated in the national robotic contest (Iran Open) and reached the second position. I then obtained an associate degree in software engineering from Amol's University and became a freelancer programmer afterwards. Briefly, I started programming microprocessors around seven years ago but switched to web developing afterwards and this is what I'm doing nowadays. I worked with different scientific and industrial institutes such as Institute for Physics and Mathematics (IPM) and Iranian Research Institute for Information Science and Technology (IranDoc).", 15);
+                    break;
+                case 'fuck off':
+                    terminal('how about you fuck off you little piece of shit?');
                     break;
                 case 'clear':
                     output.innerHTML = '';
