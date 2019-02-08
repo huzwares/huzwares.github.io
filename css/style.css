@@ -6,7 +6,7 @@
 
 html {
     color: #222;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 ::-webkit-scrollbar {
@@ -51,12 +51,25 @@ img {
     margin: auto;
 }
 
-@media only screen and (max-width: 1280px) {
+input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #222;
+    padding: 15px 35px;
+    background-color: #fff;
+    background: url(../img/chevron-right.svg) no-repeat 10px;
+    background-color: #fff;
+}
 
-    input,
-    article {
-        display: none;
-    }
+article {
+    padding: 50px 35px;
+    text-align: left;
+    line-height: 2rem;
+    overflow-y: scroll;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -72,26 +85,5 @@ img {
 
     section {
         height: 100vh;
-    }
-
-    input {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        border-radius: 0;
-        border: none;
-        border-top: 1px solid #222;
-        padding: 15px 35px;
-        background-color: #fff;
-        background: url(../img/chevron-right.svg) no-repeat 10px;
-        background-color: #fff;
-    }
-
-    article {
-        padding: 50px 35px;
-        text-align: left;
-        line-height: 2rem;
-        overflow-y: scroll;
     }
 }
