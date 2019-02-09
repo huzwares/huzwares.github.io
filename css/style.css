@@ -18,24 +18,20 @@ a {
     color: #222;
 }
 
-body {
+body,
+main,
+section {
     width: 100%;
     height: 100vh;
 }
 
+section,
 main {
     display: grid;
-    grid-template-columns: 1fr;
-    height: 100vh;
-}
-
-section {
-    display: grid;
-    width: 100%;
-    height: 50vh;
 }
 
 section:first-child {
+    display: none;
     background-color: #222;
 }
 
@@ -43,12 +39,6 @@ section:last-child {
     align-content: center;
     text-align: center;
     position: relative;
-}
-
-img {
-    height: 45vh;
-    width: auto;
-    margin: auto;
 }
 
 input {
@@ -76,6 +66,7 @@ article {
     img {
         width: 70%;
         height: auto;
+        margin: auto;
     }
 
     main {
@@ -83,7 +74,7 @@ article {
         grid-template-rows: auto;
     }
 
-    section {
-        height: 100vh;
+    section:first-child {
+        display: grid;
     }
 }
