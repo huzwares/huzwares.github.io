@@ -82,14 +82,13 @@
                 case 'about':
                     terminal("I was born in Amol, Iran and I moved to Tehran to study Mathematics and Physics in my high school. I participated in the Kharazmi robotic contest back then and got interested in the field, so in 2009 I participated in the national robotic contest (Iran Open) and won the second place. I then obtained an associate degree in software engineering from Amol's University and became a freelancer programmer afterward. Briefly, I started programming microprocessors around seven years ago but switched to web developing afterward and this is what I'm doing right now. I worked with different scientific and industrial institutes such as the Institute for Physics and Mathematics (IPM) and the Iranian Research Institute for Information Science and Technology (IranDoc).", 15);
                     break;
+                case (command.value.match(/fuck/) || {}).input:
+                    terminal('🍆💦🍆');
+                    break;
                 case 'fuck off':
                     terminal('how about you fuck off you little piece of shit?');
                     break;
-                case 'fuck you':
-                    terminal('🍆💦🍆');
-                    break;
-                case 'clear':
-                case 'clear this shit please':
+                case (command.value.match(/clear/) || {}).input:
                     output.innerHTML = '';
                     command.value = '';
                     break;
