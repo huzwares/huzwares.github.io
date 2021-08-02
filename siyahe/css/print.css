@@ -1,0 +1,270 @@
+@font-face {
+	font-family: Sahel;
+	src: url("font/Sahel-FD.eot");
+	src: url("font/Sahel-FD.eot?#iefix") format("embedded-opentype"), url("font/Sahel-FD.woff2") format("woff2"), url("font/Sahel-FD.woff") format("woff"),
+		url("font/Sahel-FD.ttf") format("truetype");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Sahel;
+	src: url("font/Sahel-Bold-FD.eot");
+	src: url("font/Sahel-Bold-FD.eot?#iefix") format("embedded-opentype"), url("font/Sahel-Bold-FD.woff2") format("woff2"),
+		url("font/Sahel-Bold-FD.woff") format("woff"), url("font/Sahel-Bold-FD.ttf") format("truetype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Sahel;
+	src: url("font/Sahel-Light-FD.eot");
+	src: url("font/Sahel-Light-FD.eot?#iefix") format("embedded-opentype"), url("font/Sahel-Light-FD.woff2") format("woff2"),
+		url("font/Sahel-Light-FD.woff") format("woff"), url("font/Sahel-Light-FD.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: Sahel;
+	src: url("font/Sahel-SemiBold-FD.eot");
+	src: url("font/Sahel-SemiBold-FD.eot?#iefix") format("embedded-opentype"), url("font/Sahel-SemiBold-FD.woff2") format("woff2"),
+		url("font/Sahel-SemiBold-FD.woff") format("woff"), url("font/Sahel-SemiBold-FD.ttf") format("truetype");
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: Sahel;
+	src: url("font/Sahel-Black-FD.eot");
+	src: url("font/Sahel-Black-FD.eot?#iefix") format("embedded-opentype"), url("font/Sahel-Black-FD.woff2") format("woff2"),
+		url("font/Sahel-Black-FD.woff") format("woff"), url("font/Sahel-Black-FD.ttf") format("truetype");
+	font-weight: 900;
+}
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Sahel", sans-serif;
+	font-weight: 400;
+	line-height: 1.75;
+	color: #0d0d0d;
+	margin: auto;
+	padding: 1rem;
+	max-width: 1280px;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 3rem 0 1.38rem;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 1.802rem;
+}
+
+h2 {
+	font-size: 1.602rem;
+}
+
+h3 {
+	font-size: 1.424rem;
+}
+
+h4 {
+	font-size: 1.266rem;
+}
+
+h5 {
+	font-size: 1.125rem;
+}
+
+small {
+	font-size: 0.889rem;
+}
+
+.g {
+	display: grid;
+	grid-gap: 1rem;
+}
+
+header {
+	display: none;
+}
+
+#invoice h1 {
+	margin: 0;
+}
+
+main {
+	display: grid;
+	grid-gap: 1rem;
+	align-content: start;
+	padding: 0 20px;
+}
+
+#logo,
+#settings {
+	width: 50%;
+	max-width: 250px;
+	margin: 1rem auto;
+}
+
+#settings {
+	padding: 5px;
+	cursor: pointer;
+}
+
+.btn {
+	margin: 0.75rem;
+	padding: 0.75rem;
+	background-color: #0d0d0d;
+	color: #fff;
+	border-radius: 6px;
+}
+
+#inHead {
+	text-align: center;
+}
+
+.fullInput input {
+	border: none;
+	outline: none;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	font-weight: bold;
+	height: 60%;
+}
+
+.fullInput label {
+	padding: 0 5px;
+}
+
+#userLogo {
+	width: 100px;
+	margin: 1rem auto;
+}
+
+.inRow {
+	text-align: center;
+	padding: 0.5rem;
+	background-color: rgba(13, 13, 13, 0.3);
+}
+
+.inRow#tableHeader {
+	display: none;
+	font-weight: bold;
+	background-color: unset;
+}
+
+.remove,
+.add_btn,
+.print {
+	display: none !important;
+}
+
+#inFooter textarea {
+	resize: none;
+	min-height: 150px;
+	padding: 15px;
+}
+#inFooter h3,
+#inFooter h2 {
+	margin: 0;
+}
+.opt {
+	display: flex;
+	justify-content: space-between;
+}
+
+label[for="discount"] {
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
+#inHead,
+#inFooter {
+	grid-template-columns: 1fr 1fr;
+}
+
+#inHead input {
+	height: 100%;
+	width: 60%;
+}
+
+#inHead input,
+#inHead {
+	text-align: revert;
+}
+
+#userLogo {
+	margin: 0 auto 0 0;
+}
+.multiLine,
+.inRow {
+	grid-template-columns: 1fr 100px 100px 100px;
+}
+.inRow input {
+	height: 100%;
+}
+.inRow label {
+	display: none;
+}
+.inRow#tableHeader {
+	display: grid;
+}
+
+.g .fullInput {
+	border: none;
+}
+
+#inHead .fullInput,
+#discount,
+#inFooter textarea {
+	border: none;
+}
+
+#inFooter {
+	grid-template-columns: 1fr;
+}
+
+#discount {
+	width: 75px;
+	text-align: center;
+}
+
+#inBody {
+	margin: 3rem 0;
+}
+
+#nn {
+	display: none;
+}

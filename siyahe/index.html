@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیاهه</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="siyahe" />
+    <meta name="theme-color" content="#000">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/fav/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/fav/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/fav/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/fav/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/fav/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/fav/apple-touch-icon-152x152.png" />
+    <link rel="shortcut icon" type="image/png" href="img/fav/favicon-196x196.png" sizes="196x196" />
+    <link rel="shortcut icon" type="image/png" href="img/fav/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" type="image/png" href="img/fav/favicon-32x32.png" sizes="32x32" />
+    <link rel="shortcut icon" type="image/png" href="img/fav/favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" type="image/png" href="img/fav/favicon-128.png" sizes="128x128" />
+</head>
+
+<body id="frontpage">
+    <header>
+        <img src="img/logo.svg" alt="logo" id="logo">
+        <h1>سیاهه</h1>
+    </header>
+    <main>
+        <a href="invoice.html" class="btn">ایجاد فاکتور جدید</a>
+        <!-- <a href="#" class="btn">فاکتورهای گذشته</a> -->
+        <a href="setting.html" class="btn">تنظیمات</a>
+    </main>
+
+    <script>
+        if (localStorage.getItem("currency") === null) {
+            localStorage.setItem('currency', 'تومان');
+        }
+        if (localStorage.getItem("logo") === null) {
+            localStorage.setItem('logo', false);
+        }
+        if (localStorage.getItem("discount") === null) {
+            localStorage.setItem('discount', 'riali');
+        }
+        if (localStorage.getItem("paper") === null) {
+            localStorage.setItem('paper', 'a4');
+        }
+    </script>
+</body>
+
+</html>

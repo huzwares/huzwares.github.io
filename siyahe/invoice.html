@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>فاکتور جدید</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/persian-datepicker.css">
+	<link rel="stylesheet" media="print" href="css/print.css" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="siyahe" />
+	<meta name="theme-color" content="#000">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/fav/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/fav/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/fav/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/fav/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/fav/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/fav/apple-touch-icon-152x152.png" />
+	<link rel="shortcut icon" type="image/png" href="img/fav/favicon-196x196.png" sizes="196x196" />
+	<link rel="shortcut icon" type="image/png" href="img/fav/favicon-96x96.png" sizes="96x96" />
+	<link rel="shortcut icon" type="image/png" href="img/fav/favicon-32x32.png" sizes="32x32" />
+	<link rel="shortcut icon" type="image/png" href="img/fav/favicon-16x16.png" sizes="16x16" />
+	<link rel="shortcut icon" type="image/png" href="img/fav/favicon-128.png" sizes="128x128" />
+</head>
+
+<body id="invoice">
+	<header>
+		<img src="img/logo.svg" alt="logo" id="logo">
+		<h1>فاکتور جدید</h1>
+		<a href="javascript:void(0);" id="openSetting"><img src="img/settings.svg" alt="settings" id="settings"></a>
+	</header>
+	<main>
+		<section id="modal">
+			<a href="javascript:void(0);" id="closeSetting"><img src="img/close.svg" alt="close" id="close"></a>
+			<iframe src="setting.html" frameborder="0"></iframe>
+		</section>
+		<section class="g" id="inHead">
+			<section class="g">
+				<div class="fullInput">
+					<label for="invoiceTitle" id="nn">نام فاکتور</label>
+					<input type="text" name="invoiceTitle" id="InvoiceName" required>
+				</div>
+				<div class="fullInput">
+					<label for="invoiceNum">شماره فاکتور:</label>
+					<input type="number" name="invoiceNum" id="invoiceNum">
+				</div>
+			</section>
+			<img id="userLogo" src="img/placeholder.svg" alt="your image">
+			<section class="g">
+				<div class="fullInput">
+					<label for="sellerName">نام فروشنده:</label>
+					<input type="text" name="sellerName" id="sellerName">
+				</div>
+				<div class="fullInput">
+					<label for="sellerAddress">‌آدرس:</label>
+					<input type="text" name="sellerAddress" id="sellerAddress">
+				</div>
+				<div class="fullInput">
+					<label for="sellerTell">شماره تماس:</label>
+					<input type="tel" name="sellerTell" id="sellerTell">
+				</div>
+				<div class="fullInput">
+					<label for="sellerEmail">ایمیل:</label>
+					<input type="email" name="sellerEmail" id="sellerEmail">
+				</div>
+			</section>
+			<section class="g">
+				<div class="fullInput">
+					<label for="buyerName">نام خریدار:</label>
+					<input type="text" name="buyerName" id="buyerName">
+				</div>
+				<div class="fullInput">
+					<label for="buyerAddress">‌آدرس:</label>
+					<input type="text" name="buyerAddress" id="buyerAddress">
+				</div>
+				<div class="fullInput">
+					<label for="buyerTell">شماره تماس:</label>
+					<input type="tel" name="buyerTell" id="buyerTell">
+				</div>
+				<div class="fullInput">
+					<label for="buyerEmail">ایمیل:</label>
+					<input type="email" name="buyerEmail" id="buyerEmail">
+				</div>
+			</section>
+			<div class="fullInput">
+				<label for="createDate">تاریخ صدور:</label>
+				<input type="text" name="createDate" id="createDate">
+			</div>
+			<div class="fullInput">
+				<label for="duoDate">تاریخ سررسید:</label>
+				<input type="text" name="duoDate" id="duoDate">
+			</div>
+		</section>
+		<section id="inBody" class="g">
+			<div class="g inRow" id="tableHeader">
+				<span>شرح کالا یا خدمات</span>
+				<span>تعداد</span>
+				<span>قیمت</span>
+				<span>جمع</span>
+			</div>
+			<div class="g inRow repeatable">
+				<div class="fullInput">
+					<label for="productName_1">شرح کالا یا خدمات</label>
+					<input type="text" data-structure="productName_" name="productName_1" value="" maxlength="150" id="productName_1" required>
+				</div>
+				<div class="fullInput">
+					<label for="productNumber_1">تعداد</label>
+					<input type="number" data-structure="productNumber_" name="productNumber_1" value="" onchange="updatePrice();" id="productNumber_1"
+						required>
+				</div>
+				<div class="fullInput">
+					<label for="productPrice_1">قیمت</label>
+					<input type="number" data-structure="productPrice_" name="productPrice_1" value="" onchange="updatePrice();" id="productPrice_1" required>
+				</div>
+				<div class="fullInput">
+					<label for="productSum_1">جمع</label>
+					<input type="number" data-structure="productSum_" name="productSum_1" value="" id="productSum_1" readonly>
+				</div>
+			</div>
+			<input id='count' name='count' type='hidden' value='1'>
+		</section>
+		<section class="g" id="inFooter">
+			<section class="g">
+				<h3>جمع کل: <span id="totalSum"></span> <span class="curr"></span></h3>
+				<label for="discount">تخفیف:
+					<input type="number" name="discount" value="0" id="discount" min="0" onchange="updatePrice();"> <span id="discountSuffix"></span></label>
+				<h2>جمع نهایی: <span id="finalSum"></span> <span class="curr"></span></h2>
+			</section>
+			<textarea name="comment">یادداشت</textarea>
+			<input class="print" type="button" onclick="window.print();" value="چاپ">
+		</section>
+
+	</main>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/persian-date.js"></script>
+	<script src="js/persian-datepicker.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/invoice.js"></script>
+</body>
+
+</html>
