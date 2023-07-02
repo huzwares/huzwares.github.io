@@ -1,20 +1,30 @@
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-}
-
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-	font-family: "Inconsolata", monospace;
+	font-family: 'Clash Grotesk', sans-serif;
+	font-variation-settings: "wght" 300;
+	letter-spacing: 1px;
 }
 
 body,
 a {
 	color: #222;
+}
+
+h1,
+h2 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 1.802rem;
+	font-variation-settings: "wght" 400;
+}
+
+h2 {
+	font-size: 1.602rem;
 }
 
 body,
@@ -30,12 +40,11 @@ article {
 	display: grid;
 }
 
-section:first-child {
+header {
 	display: none;
-	background-color: #222;
 }
 
-section:last-child {
+section {
 	align-content: center;
 	text-align: center;
 	position: relative;
@@ -50,7 +59,7 @@ input {
 	border-top: 1px solid #222;
 	padding: 15px 35px;
 	background: url(../img/chevron-right.svg) no-repeat 10px;
-	background-color: #fff;
+	background-size: 24px;
 }
 
 input:focus {
@@ -70,26 +79,29 @@ article {
 	img {
 		width: 50%;
 		height: auto;
-		margin: auto;
+		margin: auto auto 1rem;
 	}
 
 	main {
 		grid-template-columns: 1fr 1fr;
 	}
 
-	section:first-child {
+	header {
 		display: grid;
-		justify-content: center;
+		background-color: #222;
 		align-content: center;
-		justify-items: center;
+		place-items: center;
 	}
-	section:last-child {
+
+	section {
 		grid-template-rows: 1fr auto;
 	}
-	section:last-child h1,
-	section:last-child h2 {
+
+	section h1,
+	section h2 {
 		display: none;
 	}
+
 	h1,
 	h2 {
 		color: #fff;
