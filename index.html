@@ -57,7 +57,7 @@
             <h2>Computer Hobbyist</h2>
             <article>
             </article>
-            <input type="text" name="command" placeholder='Type "help", "links" or "about" for more information.'
+            <input type="text" name="command" placeholder='Type "help" for command list.'
                 autofocus>
         </section>
     </main>
@@ -86,7 +86,20 @@
                         break;
                     case 'projects':
                     case 'project':
-                        terminal('you can check <a href="https://www.linkedin.com/in/sina-omrani/" target="_blank">linkedIn</a> or <a href="https://github.com/sinaomrani" target="_blank">github</a> to see my previous projects. this page will be updated.');
+                    case 'works':
+                    case 'work':
+                        terminal(`Here are a few examples of my (as freelancer) web designs (leaving out any non-freelance projects):<br>
+                        <a href="https://rafprojects.org/" target="_blank">Raf Projects</a><br>
+                        <a href="https://tazkarprojects.com/" target="_blank">Tazkaar Projects</a><br>
+                        <a href="http://ezdaar.com/" target="_blank">Ezdaar project space</a><br>
+                        <a href="https://sepidehfarvardin.com/" target="_blank">Sepideh Farvardin Portfolio</a><br>
+                        <a href="https://mahsaparvizi.com/" target="_blank">Mahsa Parvizi Portfolio</a><br>
+                        <a href="https://erfanmojib.com/" target="_blank">Erfan Mojib Personal Website</a><br>
+                        <a href="http://amirmobed.com/" target="_blank">Amir Mobed Portfolio</a><br>
+                        <a href="https://mohammadrezaeikalantari.com/" target="_blank">Mohammad Rezaei Kalantari Portfolio</a><br>
+                        <a href="https://ivarjmand.com/" target="_blank">Fariba ArjmandPersonal Website</a><br>
+                        I made some other small things. You can find them on <a href="https://github.com/huzwares" target="_blank">github</a>
+                        `);
                         scr();
                         break;
                     case 'about':
@@ -107,22 +120,19 @@
                         command.value = '';
                         break;
                     default:
-                        terminal('ReferenceError: ' + command.value + ' is not defined');
+                        terminal('command not found: ' + command.value + '. You can see command list with "help".');
                 }
             }
         });
 
-        function terminal(text, speed) {
-            if (!speed) {
-                speed = 15;
-            }
+        function terminal(text) {
             var randid = ID();
             var para = document.createElement("p");
             para.id = randid;
             output.appendChild(para);
             new TypeIt("#" + randid + "", {
                 strings: text,
-                speed: speed,
+                speed: 5,
                 autoStart: false,
                 cursor: false
             });
