@@ -57,8 +57,7 @@
             <h2>Computer Hobbyist</h2>
             <article>
             </article>
-            <input type="text" name="command" placeholder='Type "help" for command list.'
-                autofocus>
+            <input type="text" name="command" placeholder='Type "help" for command list.' autofocus>
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"
@@ -104,7 +103,8 @@
                         break;
                     case 'about':
                     case 'bio':
-                        terminal("A software engineer with over ten years of experience in various areas, ranging from microprocessor programming for embedded and IoT devices to full-stack web development.");
+                        terminal(`A software engineer with over ten years of experience in various areas, ranging from microprocessor programming for embedded and IoT devices to full-stack web development.<br>
+                        <a href="/resume/Sina Mehdipoor Omrani Resume.pdf" target="_blank">Full CV</a>`);
                         scr();
                         break;
                     case 'fuck off':
