@@ -5,7 +5,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105170525-6"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag() {dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-105170525-6');
     </script>
@@ -26,68 +26,56 @@
     <meta name="twitter:title" content="Sina M. Omrani">
     <meta name="twitter:description" content="Sina M. Omrani. Software Developer, Computer Hobbyist">
     <meta name="twitter:image" content="https://huzwares.github.io/img/portrait.png">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57"
-        href="https://huzwares.github.io/img/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114"
-        href="https://huzwares.github.io/img/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72"
-        href="https://huzwares.github.io/img/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144"
-        href="https://huzwares.github.io/img/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120"
-        href="https://huzwares.github.io/img/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152"
-        href="https://huzwares.github.io/img/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="https://huzwares.github.io/img/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="https://huzwares.github.io/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://huzwares.github.io/img/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="https://huzwares.github.io/img/favicon-16x16.png" sizes="16x16"/>
     <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/modern-normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
 <body>
-    <main>
-        <header>
-            <img src="img/portrait-c.png" alt="portrait">
-            <h1>Sina M. Omrani</h1>
-            <h2>Computer Hobbyist</h2>
-        </header>
-        <section>
-            <h1>Sina M. Omrani</h1>
-            <h2>Computer Hobbyist</h2>
-            <article>
-            </article>
-            <input type="text" name="command" placeholder='Type "help" for command list.' autofocus>
-        </section>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"
+<main>
+    <header>
+        <img src="img/portrait-c.png" alt="portrait">
+        <h1>Sina M. Omrani</h1>
+        <h2>Computer Hobbyist</h2>
+    </header>
+    <section>
+        <h1>Sina M. Omrani</h1>
+        <h2>Computer Hobbyist</h2>
+        <article>
+        </article>
+        <input type="text" name="command" placeholder='Type "help" for command list.' autofocus>
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"
         integrity="sha256-0CPLQz4j6DXUK8fukOncK49Rizpy8xsAMKfsVPbKHF4=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        var command = document.querySelector("input");
-        var output = document.querySelector("article");
-        document.addEventListener('keypress', function (e) {
-            var key = e.which || e.keyCode;
-            if (key === 13 && command.value != "") {
-                switch (command.value) {
-                    case 'links':
-                    case 'link':
-                    case 'contact':
-                        terminal('You can find me (almost) anywhere using the username \'huzwares\'<br><a href="https://github.com/huzwares" target="_blank">github</a><br><a href="https://www.linkedin.com/in/sina-omrani/" target="_blank">linkedIn</a><br><a href="https://cohost.org/huzwares" target="_blank">cohost</a><br><a href="mailto:sina.omrani@hotmail.com">sina [dot] omrani [@] hotmail [dot] com</a>');
-                        scr();
-                        break;
-                    case 'help':
-                        terminal('usage:<br>about: print my resume and biography<br>links: print my social profile and contact info<br>projects: list of my projects<br>clear: clear the screen<br>help: print this 😒😒😒');
-                        scr();
-                        break;
-                    case 'copyright':
-                        terminal('DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE<br>Version 2, December 2004<br><br>Copyright (C) 2004 Sam Hocevar<br><br>Everyone is permitted to copy and distribute verbatim or modified<br>copies of this license document, and changing it is allowed as long<br>as the name is changed.<br><br>DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE<br>TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION<br><br>0. You just DO WHAT THE FUCK YOU WANT TO.');
-                        scr();
-                        break;
-                    case 'projects':
-                    case 'project':
-                    case 'works':
-                    case 'work':
-                        terminal(`Here are a few examples of my (as freelancer) web designs (leaving out any non-freelance projects):<br>
+<script type="text/javascript">
+    var command = document.querySelector("input");
+    var output = document.querySelector("article");
+    document.addEventListener('keypress', function (e) {
+        var key = e.which || e.keyCode;
+        if (key === 13 && command.value != "") {
+            switch (command.value) {
+                case 'links':
+                case 'link':
+                case 'contact':
+                    terminal('You can find me (almost) anywhere using the username \'huzwares\'<br><a href="https://github.com/huzwares" target="_blank">github</a><br><a href="https://www.linkedin.com/in/sina-omrani/" target="_blank">linkedIn</a><br><a href="https://cohost.org/huzwares" target="_blank">cohost</a><br><a href="mailto:sina.omrani@hotmail.com">sina [dot] omrani [@] hotmail [dot] com</a>');
+                    scr();
+                    break;
+                case 'help':
+                    terminal('usage:<br>about: print my resume and biography<br>links: print my social profile and contact info<br>projects: list of my projects<br>clear: clear the screen<br>help: print this 😒😒😒');
+                    scr();
+                    break;
+                case 'copyright':
+                    terminal('DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE<br>Version 2, December 2004<br><br>Copyright (C) 2004 Sam Hocevar<br><br>Everyone is permitted to copy and distribute verbatim or modified<br>copies of this license document, and changing it is allowed as long<br>as the name is changed.<br><br>DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE<br>TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION<br><br>0. You just DO WHAT THE FUCK YOU WANT TO.');
+                    scr();
+                    break;
+                case 'projects':
+                case 'project':
+                case 'works':
+                case 'work':
+                    terminal(`Here are a few examples of my (as freelancer) web designs (leaving out any non-freelance projects):<br>
                         <a href="https://rafprojects.org/" target="_blank">Raf Projects</a><br>
                         <a href="https://tazkarprojects.com/" target="_blank">Tazkaar Projects</a><br>
                         <a href="http://ezdaar.com/" target="_blank">Ezdaar project space</a><br>
@@ -99,55 +87,55 @@
                         <a href="https://ivarjmand.com/" target="_blank">Fariba ArjmandPersonal Website</a><br>
                         I made some other small things. You can find them on <a href="https://github.com/huzwares" target="_blank">github</a>
                         `);
-                        scr();
-                        break;
-                    case 'about':
-                    case 'bio':
-                        terminal(`A software engineer with over ten years of experience in various areas, ranging from microprocessor programming for embedded and IoT devices to full-stack web development.<br>
+                    scr();
+                    break;
+                case 'about':
+                case 'bio':
+                    terminal(`Seasoned software engineer with 10+ years of experience in microprocessor programming, embedded systems, IoT, full-stack web development, and developing CLI tools. Advanced degrees in AI & Robotics and Computer Software Engineering. Skilled in multiple programming languages and tools, adept at leading teams, managing projects, and enhancing system efficiencies. Currently working on machine learning frameworks.<br>
                         <a href="/resume/Sina Mehdipoor Omrani Resume.pdf" target="_blank">Full CV</a>`);
-                        scr();
-                        break;
-                    case 'fuck off':
-                        terminal('how about you fuck off you little piece of shit?');
-                        scr();
-                        break;
-                    case (command.value.match(/fuck/) || {}).input:
-                        terminal('🍆💦🍆');
-                        scr();
-                        break;
-                    case (command.value.match(/clear/) || {}).input:
-                        output.innerHTML = '';
-                        command.value = '';
-                        break;
-                    default:
-                        terminal('command not found: ' + command.value + '.<br>Type "help" for a list of commands.');
-                }
+                    scr();
+                    break;
+                case 'fuck off':
+                    terminal('how about you fuck off you little piece of shit?');
+                    scr();
+                    break;
+                case (command.value.match(/fuck/) || {}).input:
+                    terminal('🍆💦🍆');
+                    scr();
+                    break;
+                case (command.value.match(/clear/) || {}).input:
+                    output.innerHTML = '';
+                    command.value = '';
+                    break;
+                default:
+                    terminal('command not found: ' + command.value + '.<br>Type "help" for a list of commands.');
             }
+        }
+    });
+
+    function terminal(text) {
+        var randid = ID();
+        var para = document.createElement("p");
+        para.id = randid;
+        output.appendChild(para);
+        new TypeIt("#" + randid + "", {
+            strings: text,
+            speed: 5,
+            autoStart: false,
+            cursor: false
         });
+        scr();
+        command.value = '';
+    }
 
-        function terminal(text) {
-            var randid = ID();
-            var para = document.createElement("p");
-            para.id = randid;
-            output.appendChild(para);
-            new TypeIt("#" + randid + "", {
-                strings: text,
-                speed: 5,
-                autoStart: false,
-                cursor: false
-            });
-            scr();
-            command.value = '';
-        }
+    function scr() {
+        output.scrollTop = output.scrollHeight;
+    }
 
-        function scr() {
-            output.scrollTop = output.scrollHeight;
-        }
-
-        var ID = function () {
-            return '_' + Math.random().toString(36).substr(2, 9);
-        };
-    </script>
+    var ID = function () {
+        return '_' + Math.random().toString(36).substr(2, 9);
+    };
+</script>
 </body>
 
 </html>
