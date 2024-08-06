@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105170525-6"></script>
@@ -51,11 +51,11 @@
 <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"
         integrity="sha256-0CPLQz4j6DXUK8fukOncK49Rizpy8xsAMKfsVPbKHF4=" crossorigin="anonymous"></script>
 <script type="text/javascript">
-    var command = document.querySelector("input");
-    var output = document.querySelector("article");
+    const command = document.querySelector("input");
+    const output = document.querySelector("article");
     document.addEventListener('keypress', function (e) {
-        var key = e.which || e.keyCode;
-        if (key === 13 && command.value != "") {
+        let key = e.which || e.keyCode;
+        if (key === 13 && command.value !== "") {
             switch (command.value) {
                 case 'links':
                 case 'link':
@@ -114,8 +114,8 @@
     });
 
     function terminal(text) {
-        var randid = ID();
-        var para = document.createElement("p");
+        let randid = ID();
+        let para = document.createElement("p");
         para.id = randid;
         output.appendChild(para);
         new TypeIt("#" + randid + "", {
@@ -132,7 +132,7 @@
         output.scrollTop = output.scrollHeight;
     }
 
-    var ID = function () {
+    let ID = function () {
         return '_' + Math.random().toString(36).substr(2, 9);
     };
 </script>
